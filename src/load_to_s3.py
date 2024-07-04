@@ -1,6 +1,6 @@
 import boto3
-from io import StringIO
-
+from io import StringIO, BytesIO
+# connect to s3
 
 def connect_to_s3(aws_access_key_id, aws_secret_access_key):
     """Methods that connects to s3"""
@@ -15,7 +15,6 @@ def connect_to_s3(aws_access_key_id, aws_secret_access_key):
 
     return s3_client
 
-
 def load_df_to_s3(df, key, s3_bucket, aws_access_key_id, aws_secret_access_key):
     """Function that writes a data frame as a .csv file to a s3 bucket"""
 
@@ -26,5 +25,6 @@ def load_df_to_s3(df, key, s3_bucket, aws_access_key_id, aws_secret_access_key):
     response = s3_client.put_object(
         Bucket=s3_bucket, Key=key, Body=csv_buffer.getvalue()
     )  # this code writes the temp stored csv file and writes to s3
+
 
     print(f"The transformed data in the following location s3://{s3_bucket}/{key}")

@@ -1,6 +1,8 @@
-# libraries to load the environment variables
 import os
+# only for running the code from command line
 from dotenv import load_dotenv
+#loaded the enviroment variables
+
 load_dotenv()
 
 from src.extract import extract_transactional_data
@@ -10,6 +12,7 @@ from src.load_to_s3 import load_df_to_s3
 # fetch the environment variables from the .env file using the getenv function
 aws_access_key=os.getenv("aws_access_key")
 aws_secret_access_key=os.getenv("aws_secret_access_key")
+
 # define the key and s3 bucket
 key = "etl/sh_online_trans_final.csv"
 aws_s3_bucket = "waia-march-bootcamp"

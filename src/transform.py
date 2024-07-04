@@ -1,3 +1,4 @@
+
 def identify_and_remove_duplicates(df):
     """Function that identifies and removes duplicated rows of data"""
 

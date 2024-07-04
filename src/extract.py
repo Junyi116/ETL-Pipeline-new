@@ -1,7 +1,6 @@
 import pandas as pd
 import sqlite3
 
-
 def extract_transactional_data():
     # connect to db
     conn = sqlite3.connect("../week16/data/bootcamp_db")
