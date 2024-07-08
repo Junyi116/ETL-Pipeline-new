@@ -3,7 +3,7 @@ import sqlite3
 
 def extract_transactional_data():
     # connect to db
-    conn = sqlite3.connect("../week16/data/bootcamp_db")
+    conn = sqlite3.connect("../../week16/data/bootcamp_db")
 
     # query that extracts and transform the data
     query = """
