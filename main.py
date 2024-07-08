@@ -27,5 +27,4 @@ ot_wout_duplicates = identify_and_remove_duplicates(ot_transformed)
 
 # load the data to s3
 print("Loading data to s3")
-
 load_df_to_s3(ot_wout_duplicates, key, aws_s3_bucket, aws_access_key, aws_secret_access_key)
