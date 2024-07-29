@@ -14,7 +14,7 @@ aws_access_key=os.getenv("aws_access_key")
 aws_secret_access_key=os.getenv("aws_secret_access_key")
 
 # define the key and s3 bucket
-key = "etl/sh_online_trans_final.csv"
+key = "etl/jz_online_trans_final.csv"
 aws_s3_bucket = "waia-march-bootcamp"
 
 # extracting the online transaction data from the tables in the database and carrying out some transformation tasks
